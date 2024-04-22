@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLADE - Finest Swords and Axes</title>
+<style>
+  body {
+    background-color: #333;
+    color: silver;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  header {
+    background-color: #222;
+    color: gold;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #222;
+    color: silver;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: silver;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<header>BLADE</header>
+
+<section>
+  <h1>Our Finest Collection</h1>
+  <p>Discover our handcrafted swords and axes, designed for the discerning warrior. Each piece tells a story of battle, glory, and honor.</p>
+</section>
+
+<footer>&copy; 2023 BLADE. Crafted with honor.</footer>
+
+<script>
+  document.addEventListener('mousemove', function(e) {
+    let star = document.createElement('div');
+    star.className = 'star';
+    document.body.appendChild(star);
+
+    star.style.left = e.pageX + 'px';
+    star.style.top = e.pageY + 'px';
+
+    setTimeout(function() {
+      star.remove();
+    }, 2000); // stars fade after 2 seconds
+  });
+</script>
+
+</body>
+</html>
